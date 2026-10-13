@@ -3,24 +3,24 @@
 </p>
 
 <p align="center">
-  <strong>API de NFS-e (Nota Fiscal de Serviços Eletrônica) self-hosted para o Brasil.</strong><br>
-  Emita, liste, baixe e reconcilie NFS-e direto da sua infraestrutura.
+  <strong>Self-hosted NFS-e (Brazilian electronic service invoice) API.</strong><br>
+  Issue, list, download and reconcile NFS-e from your own infrastructure.
 </p>
 
 <p align="center">
-  <a href="https://corvo.tech">Site</a> ·
+  <a href="https://corvo.tech">Website</a> ·
   <a href="https://github.com/corvo-technology/corvo-nfse">API</a> ·
-  <a href="https://github.com/corvo-technology/corvo-nfse-node">SDK Node.js</a>
+  <a href="https://github.com/corvo-technology/corvo-nfse-node">Node.js SDK</a>
 </p>
 
 ---
 
-## O que entregamos
+## What we ship
 
-- **Corvo** ([`corvo-technology/corvo-nfse`](https://github.com/corvo-technology/corvo-nfse)) — API self-hosted (NestJS + Postgres). Você roda na sua infra, sob seu domínio.
-- **[`corvo-nfse-node`](https://github.com/corvo-technology/corvo-nfse-node)** — SDK + CLI oficiais para Node.js / TypeScript. Zero dependências em runtime, paginação por cursor, erros que nunca lançam, verificação de assinatura HMAC de webhooks.
+- **Corvo** ([`corvo-technology/corvo-nfse`](https://github.com/corvo-technology/corvo-nfse)) — Self-hosted API (NestJS + Postgres). Run it on your infra, under your own domain.
+- **[`corvo-nfse-node`](https://github.com/corvo-technology/corvo-nfse-node)** — Official Node.js / TypeScript SDK and CLI. Zero runtime dependencies, cursor pagination, errors that never throw, HMAC webhook signature verification.
 
-## Pra começar
+## Get started
 
 ```bash
 # SDK
@@ -39,7 +39,7 @@ const corvo = new Corvo({ apiKey: process.env.CORVO_API_KEY });
 const { data, error } = await corvo.invoices.create(
   {
     companyId: "...",
-    customer: { name: "Cliente", taxId: "..." },
+    customer: { name: "Customer", taxId: "..." },
     service: { code: "010101" },
     amount: 150,
     competenceDate: "2026-10-12",
@@ -48,7 +48,7 @@ const { data, error } = await corvo.invoices.create(
 );
 ```
 
-## Contato
+## Contact
 
-- Site: [corvo.tech](https://corvo.tech)
-- Issues: abra no repo correspondente (API ou SDK)
+- Website: [corvo.tech](https://corvo.tech)
+- Issues: open in the relevant repository (API or SDK)
